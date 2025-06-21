@@ -2,61 +2,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mystique Sirens</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Lexend Deca', sans-serif;
-            background-color: #ffffff;
-            color: #111;
-        }
-        header {
-            background: url('header-image.png') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: gold;
-       }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        h2 {
-            font-weight: 600;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        h3 {
-            font-weight: 400;
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            font-weight: 300;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystique Sirens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lexend+Deca:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>MYSTIQUE SIRENS</h1>
-    </header>
-    <div class="container">
-        <h2>Featured Stories</h2>
+  <header class="hero-header">
+    <img src="cover1.png" alt="Mystique Sirens" class="hero-image" />
+  </header>
+  <main>
+    <section class="content">
+      <h1 class="main-title">Featured Stories</h1>
 
-        <h3>The Heiress Who Chose Mystery Over Fame</h3>
-        <p>She vanished from the spotlight. No scandal. Just elegance, wrapped in silence. That’s not fame. That’s power.</p>
+      <article class="story">
+        <h2 class="story-title">The Heiress Who Chose Mystery Over Fame</h2>
+        <p class="story-description">She vanished from the spotlight. No scandal. Just elegance, wrapped in silence. That’s not fame. That’s power.</p>
+      </article>
 
-        <h3>The Secret Lives of Famous Models You Never Knew About</h3>
-        <p>Behind the glittering lights and lavish runways lies a world few ever glimpse.</p>
-    </div>
+      <article class="story">
+        <h2 class="story-title">The Secret Lives of Famous Models You Never Knew About</h2>
+        <p class="story-description">Behind the glittering lights and lavish runways lies a world few ever glimpse.</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
