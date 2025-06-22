@@ -141,6 +141,66 @@
       border-top: 1px solid #333;
     }
 
+    .email-signup {
+      background: linear-gradient(135deg, #1a1a1a, #000);
+      padding: 3rem;
+      text-align: center;
+      border: 1px solid #333;
+      border-radius: 10px;
+      margin-top: 2rem;
+      background-image: url('newsletter-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+    }
+
+    .email-signup h2 {
+      margin-bottom: 1rem;
+    }
+
+    .email-signup p {
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .email-signup form {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .email-signup input[type="text"],
+    .email-signup input[type="email"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 250px;
+    }
+
+    .email-signup button {
+      padding: 0.75rem 1.5rem;
+      background: var(--gold);
+      border: none;
+      border-radius: 4px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .email-signup button:hover {
+      background: var(--accent);
+    }
+
+    .form-response {
+      color: var(--gold);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      display: none;
+    }
+
     [data-animate] {
       opacity: 0;
       transform: translateY(30px);
@@ -165,7 +225,7 @@
   <main>
     <section class="video-feature" data-animate>
       <h2>Logo Reveal</h2>
-      <iframe src="https://www.youtube.com/embed/kQHVsI7sXvU?si=9yMDAcJtlsOMwKsu?rel=0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/kQHVsI7sXvU?si=9yMDAcJtlsOMwKsu" allowfullscreen></iframe>
     </section>
 
     <section id="featured" data-animate>
@@ -196,10 +256,21 @@
         <li><a href="./02_video-projects/001_template-video/edit-notes.md">Editing Notes</a></li>
       </ul>
     </section>
+
+    <section class="email-signup" data-animate>
+      <h2>Join the Mystique Wait List</h2>
+      <p>Be the first to get the full AI production engine templates when they go live.</p>
+      <form action="https://formspree.io/f/xblyavok" method="POST" onsubmit="showConfirmation(event)">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="form-response" id="form-response">Thanks for joing the waitlist, SOme secrets are worth sharing. 🌟</div>
+    </section>
   </main>
 
   <footer>
-    © Mystique Sirens — Created with the help of Runway, ChatGPT, Elevenlabs, Vozo, Adobe Premiere and After Effects and a little magic. 
+    © Mystique Sirens — Created with RunwayML, ChatGPT,Elevenlabs, Adobe Premiere and After Effects and a bunch of other weird stuff. 
   </footer>
 
   <script>
@@ -212,6 +283,23 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    function showConfirmation(event) {
+      event.preventDefault();
+      const form = event.target;
+      const response = document.getElementById('form-response');
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(() => {
+        response.style.display = 'block';
+        form.reset();
+      });
+    }
   </script>
 </body>
 </html>
+
