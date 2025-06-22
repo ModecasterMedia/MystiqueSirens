@@ -18,28 +18,12 @@ _Stories told through silence, elegance, and cinematic allure._
 
 ---
 
-## Prompt Library
-
-- [Voiceover Templates](./03_prompts-bank/voiceover-prompts.md)
-- [Runway Visual Styles](./03_prompts-bank/runway-visuals.md)
-- [YouTube Titles + Tags](./03_prompts-bank/titles-and-tags.md)
-
----
-
-## Content Planning & Notes
-
-- [Editing Notes](./02_video-projects/001_template-video/edit-notes.md)
-- [Storyboard Template](./01_templates/storyboard-template.md)
-
----
-
 ## About Mystique Sirens
 
 **Mystique Sirens** explores the hidden lives, unspoken stories, and elegant enigmas behind fashion’s most iconic muses—both real and imagined.  
 Our channel unveils what the world never saw… and what it never forgot.
 
 > New visual stories every week  
-> Written with ChatGPT. Designed in RunwayML. Edited in Premiere.
 
 ---
 
